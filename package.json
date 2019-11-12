@@ -1,0 +1,64 @@
+{
+  "name": "tcc-exam",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Tailor content container for exams",
+  "keywords": [],
+  "homepage": "https://github.com/vladimyr/tcc-exam",
+  "bugs": {
+    "url": "https://github.com/vladimyr/tcc-exam/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/tcc-exam.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Dario Vladovic",
+    "email": "d.vladimyr+dev@gmail.com",
+    "url": "https://github.com/vladimyr"
+  },
+  "files": [
+    "src",
+    "dist",
+    "util.js"
+  ],
+  "main": "dist/tcc-exam.js",
+  "unpkg": "dist/tcc-exam.iife.js",
+  "module": "dist/tcc-exam.esm.js",
+  "scripts": {
+    "prebuild": "del-cli dist",
+    "build": "bili && bili --config ./bili.server.config.js",
+    "dev": "bili -w",
+    "lint": "eslint --ext .js,.vue .",
+    "serve": "http-server -p 9090 dist"
+  },
+  "dependencies": {
+    "sass-web-fonts": "^2.1.0",
+    "vue-swal": "^1.0.0"
+  },
+  "devDependencies": {
+    "@extensionengine/eslint-config": "^1.1.0",
+    "@extensionengine/rollup-plugin-tailor-ce": "^0.2.0",
+    "babel-eslint": "^10.0.3",
+    "bili": "^4.8.1",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.0.0",
+    "http-server": "^0.11.1",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-vue": "^5.1.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "jsdelivr": "dist/tcc-exam.iife.js",
+  "tailor": {
+    "label": "Exam",
+    "type": "EXAM"
+  }
+}
